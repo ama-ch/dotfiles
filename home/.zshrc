@@ -34,3 +34,4 @@ plugins=(git git-flow common alias ubuntu git-orig node-orig)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
