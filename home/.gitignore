@@ -1,0 +1,15 @@
+.classpath
+.project
+.settings/
+target/
+.idea/
+*~
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+*.sass-cache
+.svn/
