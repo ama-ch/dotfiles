@@ -1,0 +1,11 @@
+# alias
+alias g='git'
+alias gst='git st'
+alias gbr='git br'
+alias gl='git l'
+alias gd='git d'
+alias gsh='git stash'
+alias gsp='git stash pop'
+alias gsl='git stash list'
+alias gpr='git pr'
+alias gw='git web'
