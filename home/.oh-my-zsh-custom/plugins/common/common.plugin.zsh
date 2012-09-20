@@ -61,7 +61,7 @@ setopt interactive_comments
 
 # z.sh
 _Z_CMD=j
-source ~/github/z/z.sh
+source ~/z/z.sh
 precmd() {
   _z --add "$(pwd -P)"
 }
