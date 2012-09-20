@@ -4,7 +4,7 @@
 
     $ git clone git://github.com/rupa/z.git ~/z
 
-# install git-browse-remote
+### install git-browse-remote
 
     $ gem install git-browse-remote
 
