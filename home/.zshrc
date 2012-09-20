@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -34,4 +35,3 @@ plugins=(git git-flow common alias ubuntu git-orig node-orig)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
