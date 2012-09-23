@@ -1,3 +1,4 @@
+export PATH=/usr/local/bin:$PATH
 # export LANG="ja_JP.UTF-8"
 
 # 3秒以上かかった処理は詳細表示
