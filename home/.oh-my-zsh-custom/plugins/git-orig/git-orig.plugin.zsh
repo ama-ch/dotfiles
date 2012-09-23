@@ -1,9 +1,11 @@
 # alias
 alias g='git'
 alias gst='git st'
+alias gs='git s'
 alias gbr='git br'
 alias gl='git l'
 alias gd='git d'
+alias gdc='git dc'
 alias gsh='git stash'
 alias gsp='git stash pop'
 alias gsl='git stash list'
