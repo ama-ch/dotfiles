@@ -30,12 +30,9 @@
     rc = rebase --continue
     wd = diff --word-diff
     lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
-    br = branch -a
-    spull = submodule foreach git pull --rebase # submoduleの更新
-    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
     b = branch -a
-    ci = commit
-    co = checkout
+    br = branch -a
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
     d = diff
     di = diff
     dc = diff --cached
