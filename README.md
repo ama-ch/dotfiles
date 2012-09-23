@@ -1,5 +1,14 @@
 ## Installation
 
+### Install [Homebrew](http://mxcl.github.com/homebrew/)
+
+    $ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+
+### Install [rvm](https://rvm.io/)
+
+    $ curl -L https://get.rvm.io | bash -s stable
+    $ rvm install 1.8.7
+
 ### Install [nodebrew](https://github.com/hokaccha/nodebrew)
 
     $ curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
