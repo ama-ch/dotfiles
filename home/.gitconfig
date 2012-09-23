@@ -17,6 +17,10 @@
     top = https://{host}/{path}
     ref = https://{host}/{path}/tree/{short_ref}
     rev = https://{host}/{path}/commit/{commit}
+[browse-remote "bitbucket.org"]
+    top = https://{host}/{path}
+    ref = https://{host}/{path}/changesets/tip/{short_ref}
+    rev = https://{host}/{path}/changeset/{commit}
 [web]
     browser = google-chrome
 [alias]
