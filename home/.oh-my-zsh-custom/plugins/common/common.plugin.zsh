@@ -59,10 +59,3 @@ setopt brace_ccl
 zstyle ':completion:*:default' menu select=1
 # コマンドラインで # 以降をコメントとする
 setopt interactive_comments
-
-# z.sh
-_Z_CMD=j
-source ~/z/z.sh
-precmd() {
-  _z --add "$(pwd -P)"
-}

@@ -30,7 +30,7 @@ ZSH_THEME="ama-ch"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow common ruby rvm alias ubuntu git-orig node-orig)
+plugins=(git git-flow common ruby rvm alias ubuntu git-orig node-orig z)
 
 source $ZSH/oh-my-zsh.sh
 
