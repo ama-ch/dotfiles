@@ -66,10 +66,3 @@ source ~/z/z.sh
 precmd() {
   _z --add "$(pwd -P)"
 }
-
-# auto-fu.zsh
-#source ~/github/auto-fu.zsh/auto-fu.zsh
-#function zle-line-init () {
-#    auto-fu-init
-#}
-#zle -N zle-line-init
