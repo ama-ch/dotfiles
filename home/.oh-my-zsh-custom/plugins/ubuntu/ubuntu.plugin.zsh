@@ -8,6 +8,7 @@ if [[ "$os" == "Linux" ]]; then
   LD_LIBRARY_PATH=/usr/local/mysql-5.5/lib/mysql:$LD_LIBRARY_PATH
   export JAVA_HOME PATH
   export LD_LIBRARY_PATH
+  export GIT_SSL_NO_VERIFY=1
 
   # alias
   alias rm='trash-put' # sudo apt-get install trash-cli
