@@ -9,7 +9,7 @@
 [core]
     excludesfile = ~/.gitignore
     editor = emacs
-    pager = less -r
+    pager = LESS=-R less
 [push]
     default = tracking
 [branch]
