@@ -18,3 +18,25 @@ compdef _git gsl=git-stash
 alias gpr='git pr'
 compdef _git gpr=git-pull
 alias gw='git web'
+
+function add_nth_file() {
+  if [ $# -eq 1 ]; then
+    local file=`git status -s -b | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
+    echo adding $file
+    git add $file
+  else
+    exit 1
+  fi
+}
+
+function diff_nth_file() {
+  if [ $# -eq 1 ]; then
+    local file=`git status -s -b | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
+    git diff $file
+  else
+    exit 1
+  fi
+}
+
+alias gsa='add_nth_file'
+alias gsd='diff_nth_file'
