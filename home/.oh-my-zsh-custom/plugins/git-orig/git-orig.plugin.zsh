@@ -21,8 +21,7 @@ alias gw='git web'
 
 function add_nth_file() {
   if [ $# -eq 1 ]; then
-    local file=`git status -s -b | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
-    echo adding $file
+    local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
     git add $file
   else
     exit 1
@@ -31,7 +30,7 @@ function add_nth_file() {
 
 function diff_nth_file() {
   if [ $# -eq 1 ]; then
-    local file=`git status -s -b | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
+    local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
     git diff $file
   else
     exit 1
