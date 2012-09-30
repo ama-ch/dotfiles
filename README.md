@@ -9,6 +9,14 @@
     $ curl -L https://get.rvm.io | bash -s stable
     $ rvm install 1.8.7
 
+### Install [hub](https://github.com/defunkt/hub)
+
+    $ brew install hub
+
+or
+
+    $ curl http://defunkt.io/hub/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
+
 ### Install [nodebrew](https://github.com/hokaccha/nodebrew)
 
     $ curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
