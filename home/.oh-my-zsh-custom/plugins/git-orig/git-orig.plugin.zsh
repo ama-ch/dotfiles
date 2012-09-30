@@ -23,6 +23,7 @@ function add_nth_file() {
   if [ $# -eq 1 ]; then
     local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
     git add $file
+    git status -sb
   else
     exit 1
   fi
