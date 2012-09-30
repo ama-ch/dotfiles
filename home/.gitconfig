@@ -37,7 +37,7 @@
     lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
     b = branch -a
     br = branch -a
-    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+    aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
     d = diff
     di = diff
     dc = diff --cached
