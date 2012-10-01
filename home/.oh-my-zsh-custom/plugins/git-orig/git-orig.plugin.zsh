@@ -20,17 +20,19 @@ compdef _git gpr=git-pull
 alias gw='git web'
 
 function add_nth_file() {
-  if [ $# -eq 1 ]; then
+  if [ $# -ge 1 ]; then
     local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
-    git add $file
+    shift
+    git add $@ $file
     git status -sb
   fi
 }
 
 function diff_nth_file() {
-  if [ $# -eq 1 ]; then
+  if [ $# -ge 1 ]; then
     local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
-    git diff $file
+    shift
+    git diff $@ $file
   fi
 }
 
