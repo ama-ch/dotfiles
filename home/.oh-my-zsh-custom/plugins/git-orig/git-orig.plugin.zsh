@@ -17,6 +17,8 @@ alias gsl='git stash list'
 compdef _git gsl=git-stash
 alias gpr='git pr'
 compdef _git gpr=git-pull
+alias gc='git ci'
+compdef _git gc=git-commit
 alias gw='git web'
 
 function add_nth_file() {
