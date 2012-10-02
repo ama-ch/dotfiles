@@ -14,6 +14,8 @@
     default = tracking
 [branch]
     autosetuprebase = always
+[rerere]
+    enabled = 1
 [browse-remote "github.com"]
     top = https://{host}/{path}
     ref = https://{host}/{path}/tree/{short_ref}
