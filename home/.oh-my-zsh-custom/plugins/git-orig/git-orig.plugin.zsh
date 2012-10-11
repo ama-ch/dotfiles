@@ -38,5 +38,15 @@ function diff_nth_file() {
   fi
 }
 
+function checkout_nth_file() {
+  if [ $# -ge 1 ]; then
+    local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
+    shift
+    git checkout $@ $file
+    git status -sb
+  fi
+}
+
 alias gsa='add_nth_file'
 alias gsd='diff_nth_file'
+alias gsco='checkout_nth_file'
