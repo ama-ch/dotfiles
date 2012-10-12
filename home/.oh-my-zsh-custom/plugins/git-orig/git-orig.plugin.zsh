@@ -23,30 +23,28 @@ alias gc='git ci'
 compdef _git gc=git-commit
 alias gw='git web'
 
+function get_nth_changed_file() {
+  echo $(git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}')
+}
+
 function add_nth_file() {
-  if [ $# -ge 1 ]; then
-    local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
-    shift
-    git add $@ $file
-    git status -sb
-  fi
+  local file=$(get_nth_changed_file ${1:-1})
+  [ $# -ge 1 ] && shift
+  git add $@ $file
+  git status -sb
 }
 
 function diff_nth_file() {
-  if [ $# -ge 1 ]; then
-    local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
-    shift
-    git diff $@ $file
-  fi
+  local file=$(get_nth_changed_file ${1:-1})
+  [ $# -ge 1 ] && shift
+  git diff $@ $file
 }
 
 function checkout_nth_file() {
-  if [ $# -ge 1 ]; then
-    local file=`git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'`
-    shift
-    git checkout $@ $file
-    git status -sb
-  fi
+  local file=$(get_nth_changed_file ${1:-1})
+  [ $# -ge 1 ] && shift
+  git checkout $@ $file
+  git status -sb
 }
 
 alias gsa='add_nth_file'
