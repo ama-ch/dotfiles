@@ -23,27 +23,43 @@ alias gc='git ci'
 compdef _git gc=git-commit
 alias gw='git web'
 
+function is_number() {
+  echo $1 | egrep -q '^[0-9]+$'
+}
+
 function get_nth_changed_file() {
-  echo $(git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}')
+  git status -sb | grep -v "^#" | head -n $1 | tail -n 1 | awk '{print $NF}'
+}
+
+function process_gitargs() {
+  local command=$1; shift
+  local nums=""
+  local args=""
+  for arg in $@; do
+    if is_number $arg; then
+      nums="$nums $arg"
+    else
+      args="$args $arg"
+    fi
+  done
+
+  for num in $(echo ${nums:-1}); do
+    local file=$(get_nth_changed_file ${num})
+    git $command $(echo $args) $file
+  done
 }
 
 function add_nth_file() {
-  local file=$(get_nth_changed_file ${1:-1})
-  [ $# -ge 1 ] && shift
-  git add $@ $file
+  process_gitargs add $@ && \
   git status -sb
 }
 
 function diff_nth_file() {
-  local file=$(get_nth_changed_file ${1:-1})
-  [ $# -ge 1 ] && shift
-  git diff $@ $file
+  process_gitargs diff $@
 }
 
 function checkout_nth_file() {
-  local file=$(get_nth_changed_file ${1:-1})
-  [ $# -ge 1 ] && shift
-  git checkout $@ $file
+  process_gitargs checkout $@ && \
   git status -sb
 }
 
