@@ -44,3 +44,7 @@ function checkout_nth_file() {
   call_command_with_args "git checkout" $@ && \
   git status -sb
 }
+
+function reset_nth_file() {
+  call_command_with_args "git reset HEAD" $@
+}
