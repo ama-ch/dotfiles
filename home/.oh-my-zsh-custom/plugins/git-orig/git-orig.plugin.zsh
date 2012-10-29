@@ -1,6 +1,8 @@
 source "$ZSH_CUSTOM/plugins/git-orig/git-orig.zsh"
 
 # Aliases
+alias gf='git fetch'
+compdef _git gf=git-fetch
 alias gs='git s'
 compdef _git gs=git-status
 alias gl='git l'
