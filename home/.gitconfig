@@ -32,42 +32,15 @@
     browser = google-chrome
 [alias]
     ci = commit -v
-    co = checkout
-    st = status
-    pr = pull --rebase
-    pp = pull --rebase --prune
-    fo = fetch origin
-    ro = rebase origin
-    rc = rebase --continue
-    wd = diff --word-diff
     lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
-    b = branch -a
-    br = branch -a
     aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
-    d = diff
-    di = diff
-    dc = diff --cached
-    dic = diff --cached
     ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
     info = remote show origin
     l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %ar%Creset'
     ll = log --stat --abbrev-commit
     lp = log --oneline -n 20 -p
     ls = log --stat --abbrev-commit -n 1 # display previous log
-    mergenoff = merge --no-ff
-    s = status --short --branch
-    sl = stash list --pretty=oneline --abbrev-commit --date=relative
-    ss = stash save
-    sa = stash apply
-    sp = stash pop
     sm = submodule
     rl = reflog
     re = reflog expire --expire=30.days refs/stash
-    fs = flow feature start
-    ff = flow feature finish --rebase
-    fp = flow feature publish
-    ft = flow feature track
-    track = flow feature track
-    fco = flow feature checkout
-    web = browse-remote
     see = browse
