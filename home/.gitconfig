@@ -40,7 +40,6 @@
     ll = log --stat --abbrev-commit
     lp = log --oneline -n 20 -p
     ls = log --stat --abbrev-commit -n 1 # display previous log
-    sm = submodule
     rl = reflog
     re = reflog expire --expire=30.days refs/stash
     see = browse
