@@ -59,3 +59,12 @@ setopt brace_ccl
 zstyle ':completion:*:default' menu select=1
 # コマンドラインで # 以降をコメントとする
 setopt interactive_comments
+
+function temp(){
+  TMP_DIR="$HOME/tmp/"
+  if [ ! -d $TMP_DIR ]; then
+    mkdir -p $TMP_DIR
+  fi
+  TEMPLATE=$(date +'%Y%m%d'.$1${1:+.})XXXXXX
+  cd $(mktemp -d --tmpdir=$TMP_DIR $TEMPLATE)
+}
