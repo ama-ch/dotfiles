@@ -29,6 +29,7 @@ alias gsm='git submodule'
 compdef _git gsm=git-submodule
 alias gsu='git submodule update'
 compdef _git gsu=git-submodule
+alias gfup='gf && gup'
 alias gw='git browse-remote'
 alias gsa='add_nth_file'
 alias gsd='diff_nth_file'
