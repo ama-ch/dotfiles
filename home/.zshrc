@@ -39,7 +39,7 @@ git
 github
 git-flow
 ruby
-rvm
+rbenv
 alias
 mac
 ubuntu
