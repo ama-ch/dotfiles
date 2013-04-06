@@ -6,11 +6,13 @@
 $ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 ```
 
-### Install [rvm](https://rvm.io/)
+### Install [rbenv](https://github.com/sstephenson/rbenv/)
 
 ```sh
-$ curl -L https://get.rvm.io | bash -s stable
-$ rvm install 1.8.7
+$ brew install rbenv
+$ brew install ruby-build
+$ rbenv install 1.9.2-p320
+$ rbenv global 1.9.2-p320
 ```
 
 ### Install [hub](https://github.com/defunkt/hub)
