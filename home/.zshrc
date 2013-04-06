@@ -38,6 +38,7 @@ gem
 git
 github
 git-flow
+gibo
 ruby
 rbenv
 alias
