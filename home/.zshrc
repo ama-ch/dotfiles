@@ -41,6 +41,7 @@ git-flow
 gibo
 ruby
 rbenv
+plenv
 alias
 mac
 ubuntu
