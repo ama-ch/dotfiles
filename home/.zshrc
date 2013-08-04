@@ -47,6 +47,7 @@ mac
 ubuntu
 git-orig
 nodebrew
+vagrant
 z
 )
 
