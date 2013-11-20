@@ -1,9 +1,9 @@
 ## Installation
 
-### Install [Homebrew](http://mxcl.github.com/homebrew/)
+### Install [Homebrew](http://brew.sh/)
 
 ```sh
-$ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 ```
 
 ### Install [rbenv](https://github.com/sstephenson/rbenv/)
