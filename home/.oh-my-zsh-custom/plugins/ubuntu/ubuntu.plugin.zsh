@@ -9,6 +9,9 @@ if [[ "$os" == "Linux" ]]; then
   export JAVA_HOME PATH
   export LD_LIBRARY_PATH
   export GIT_SSL_NO_VERIFY=1
+  # linuxbrew (https://github.com/Homebrew/linuxbrew)
+  PATH="$HOME/.linuxbrew/bin:$PATH"
+  LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
   # alias
   alias rm='trash-put' # sudo apt-get install trash-cli
