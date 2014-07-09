@@ -52,6 +52,7 @@ nodebrew
 vagrant
 z
 peco
+cdr
 )
 
 source $ZSH/oh-my-zsh.sh
