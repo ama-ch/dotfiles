@@ -3,6 +3,6 @@ if [[ -d /usr/local/go ]]; then
   if [[ ! -d $HOME/go ]]; then
     mkdir $HOME/go
     export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin
   fi
+  export PATH=$PATH:$GOPATH/bin
 fi
