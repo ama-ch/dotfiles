@@ -51,6 +51,7 @@ git-orig
 nodebrew
 vagrant
 z
+peco
 )
 
 source $ZSH/oh-my-zsh.sh
