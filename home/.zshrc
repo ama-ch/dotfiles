@@ -39,6 +39,8 @@ git
 github
 git-flow
 gibo
+golang
+golang-path
 ruby
 rbenv
 plenv
