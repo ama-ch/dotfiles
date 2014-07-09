@@ -15,7 +15,7 @@ $ rbenv install 1.9.2-p320
 $ rbenv global 1.9.2-p320
 ```
 
-### Install [hub](https://github.com/defunkt/hub)
+### Install [hub](https://hub.github.com/)
 
 ```sh
 $ brew install hub
@@ -24,7 +24,9 @@ $ brew install hub
 or
 
 ```sh
-$ curl http://defunkt.io/hub/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
+$ ghq get github/hub
+$ ghq look hub
+$ rake install prefix=/usr/local
 ```
 
 ### Install [nodebrew](https://github.com/hokaccha/nodebrew)
