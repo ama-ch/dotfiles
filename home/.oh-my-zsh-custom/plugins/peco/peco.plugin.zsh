@@ -50,21 +50,21 @@ alias -g B="peco-select-branch"
 
 # select recent directory
 function peco-cdr () {
-    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-    zle clear-screen
+  local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
 }
 zle -N peco-cdr
 bindkey '^[' peco-cdr
 
 # list all functions start with "peco-"
 function peco-function-list () {
-    local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | peco --query "$LBUFFER")
-    if [ -n "$selected" ]; then
-      ${selected}
-    fi
+  local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | peco --query "$LBUFFER")
+  if [ -n "$selected" ]; then
+    ${selected}
+  fi
 }
 alias pfl="peco-function-list"
