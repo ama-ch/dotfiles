@@ -46,7 +46,7 @@ alias pk="peco-pkill"
 function peco-select-branch() {
   git branch | peco | sed -e "s/^\*[ ]*//g"
 }
-alias -g B="peco-select-branch"
+alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
 
 # select recent directory
 function peco-cdr () {
