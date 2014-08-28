@@ -26,6 +26,11 @@ zle -N peco-src
 stty -ixon
 bindkey '^s' peco-src
 
+function peco-git-list-files() {
+  git ls-files | peco
+}
+alias -g F='`git ls-files | peco`'
+
 # process list
 function peco-ps() {
   ps aux | peco
