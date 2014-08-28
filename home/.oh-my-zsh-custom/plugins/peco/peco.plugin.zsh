@@ -1,16 +1,17 @@
 # select history
 function peco-select-history() {
-  local tac
-  (which gtac &> /dev/null && tac="gtac") || \
-    (which tac &> /dev/null && tac="tac") || \
-    tac="tail -r"
-  BUFFER=$(fc -l -n 1 | eval $tac | \
-              peco --layout=bottom-up --query "$LBUFFER")
-  CURSOR=$#BUFFER # move cursor
-  zle -R -c       # refresh
+  typeset tac
+  if which tac > /dev/null; then
+    tac=tac
+  else
+    tac='tail -r'
+  fi
+  BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle -R -c
 }
 zle -N peco-select-history
-bindkey '^R' peco-select-history
+bindkey '^r' peco-select-history
 
 # integrate all source code with ghq
 function peco-src() {
