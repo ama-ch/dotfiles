@@ -11,7 +11,7 @@ function peco-select-history() {
   zle -R -c
 }
 zle -N peco-select-history
-bindkey '^r' peco-select-history
+bindkey '^x^r' peco-select-history
 
 # integrate all source code with ghq
 function peco-src() {
