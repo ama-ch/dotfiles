@@ -2,7 +2,7 @@
 
 set -ex
 
-cd ~/.homesick/repos/ama-ch/dotfiles
+cd ~/.homesick/repos/dotfiles
 git stash
 homesick pull ama-ch/dotfiles
 git stash pop
