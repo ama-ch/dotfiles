@@ -11,7 +11,7 @@
     editor = emacs
     pager = LESS=-R less
 [push]
-    default = upstream
+    default = current
 [branch]
     autosetuprebase = always
 [merge]
