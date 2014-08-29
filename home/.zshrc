@@ -50,7 +50,6 @@ ubuntu
 git-orig
 nodebrew
 vagrant
-z
 peco
 cdr
 )
