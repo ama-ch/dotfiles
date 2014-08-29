@@ -4,6 +4,6 @@ set -ex
 
 cd ~/.homesick/repos/dotfiles
 git stash
-homesick pull ama-ch/dotfiles
+homesick pull dotfiles
 git stash pop
 cd -
