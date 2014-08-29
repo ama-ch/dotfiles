@@ -52,7 +52,7 @@ $ gem install git-browse-remote
 ```sh
 $ gem install homesick
 $ homesick clone ama-ch/dotfiles
-$ homesick symlink ama-ch/dotfiles
+$ homesick symlink dotfiles
 ```
 
 ### Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
