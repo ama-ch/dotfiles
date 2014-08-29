@@ -5,9 +5,9 @@ if [[ "$os" == "Linux" ]]; then
   JAVA_HOME=/usr/lib/jvm/default-java
   MYSQL_HOME=/usr/local/mysql
   PATH=$PATH:$JAVA_HOME/bin:$MYSQL_HOME/bin
-  LD_LIBRARY_PATH=/usr/local/mysql-5.5/lib/mysql:$LD_LIBRARY_PATH
+  #LD_LIBRARY_PATH=/usr/local/mysql-5.5/lib/mysql:$LD_LIBRARY_PATH
   export JAVA_HOME PATH
-  export LD_LIBRARY_PATH
+  #export LD_LIBRARY_PATH
   export GIT_SSL_NO_VERIFY=1
   # linuxbrew (https://github.com/Homebrew/linuxbrew)
   PATH="$HOME/.linuxbrew/bin:$PATH"
