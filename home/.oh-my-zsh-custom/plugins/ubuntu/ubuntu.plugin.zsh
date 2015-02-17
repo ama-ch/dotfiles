@@ -2,7 +2,7 @@ os=$(uname -s)
 if [[ "$os" == "Linux" ]]; then
   # exports
   export GDK_NATIVE_WINDOWS=1
-  JAVA_HOME=/usr/lib/jvm/default-java
+  JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
   MYSQL_HOME=/usr/local/mysql
   PATH=$PATH:$JAVA_HOME/bin:$MYSQL_HOME/bin
   #LD_LIBRARY_PATH=/usr/local/mysql-5.5/lib/mysql:$LD_LIBRARY_PATH
