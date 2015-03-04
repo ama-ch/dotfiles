@@ -3,7 +3,7 @@
 ### Install [Homebrew](http://brew.sh/)
 
 ```sh
-$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ### Install [rbenv](https://github.com/sstephenson/rbenv/)
