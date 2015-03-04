@@ -58,7 +58,7 @@ $ homesick symlink dotfiles
 ### Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```sh
-$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+$ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ```
 
 That's all! Restart terminal.
