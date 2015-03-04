@@ -17,8 +17,8 @@ $ brew install caskroom/cask/brew-cask
 ```sh
 $ brew install rbenv
 $ brew install ruby-build
-$ rbenv install 1.9.2-p320
-$ rbenv global 1.9.2-p320
+$ rbenv install 2.2.1
+$ rbenv global 2.2.1
 ```
 
 ### Install [hub](https://hub.github.com/)
