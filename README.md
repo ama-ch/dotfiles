@@ -38,7 +38,7 @@ $ rake install prefix=/usr/local
 ### Install [nodebrew](https://github.com/hokaccha/nodebrew)
 
 ```sh
-$ curl https://raw.github.com/hokaccha/nodebrew/master/nodebrew | perl - setup
+$ curl -L git.io/nodebrew | perl - setup
 ```
 
 ### Install [git-browse-remote](https://github.com/motemen/git-browse-remote)
