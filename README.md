@@ -6,6 +6,12 @@
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+### Install [Homebrew Cask](http://caskroom.io)
+
+```sh
+$ brew install caskroom/cask/brew-cask
+```
+
 ### Install [rbenv](https://github.com/sstephenson/rbenv/)
 
 ```sh
