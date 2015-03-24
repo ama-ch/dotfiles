@@ -91,7 +91,7 @@ function peco-git-recent-all-branches() {
 zle -N peco-git-recent-all-branches
 bindkey '^xb' peco-git-recent-all-branches
 
-function peco-git-revert-recently-commits() {
+function peco-git-revert-recent-commits() {
   local commit_hash=$(git log --first-parent \
     --pretty=format:'%h %s - %an, %ar' \
     | peco | awk '{ print $1 }')
