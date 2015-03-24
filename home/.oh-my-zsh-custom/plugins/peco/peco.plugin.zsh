@@ -65,7 +65,7 @@ function peco-cdr () {
 zle -N peco-cdr
 bindkey '^[' peco-cdr
 
-function peco-git-recent-branches () {
+function peco-git-recent-branches() {
     local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | \
         perl -pne 's{^refs/heads/}{}' | \
         peco)
@@ -78,7 +78,7 @@ function peco-git-recent-branches () {
 zle -N peco-git-recent-branches
 bindkey '^x^b' peco-git-recent-branches
 
-function peco-git-recent-all-branches () {
+function peco-git-recent-all-branches() {
     local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads refs/remotes | \
         perl -pne 's{^refs/(heads|remotes)/}{}' | \
         peco)
@@ -90,6 +90,15 @@ function peco-git-recent-all-branches () {
 }
 zle -N peco-git-recent-all-branches
 bindkey '^xb' peco-git-recent-all-branches
+
+function peco-git-revert-recently-merges() {
+  local commit_hash=$(git log --first-parent --merges \
+    --pretty=format:'%h %s - %an, %ar' \
+    | peco | awk '{ print $1 }')
+  if [ -n "$commit_hash" ]; then
+    git revert -m 1 ${commit_hash}
+  fi
+}
 
 # list all functions start with "peco-"
 function peco-function-list () {
