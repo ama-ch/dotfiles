@@ -91,12 +91,18 @@ function peco-git-recent-all-branches() {
 zle -N peco-git-recent-all-branches
 bindkey '^xb' peco-git-recent-all-branches
 
-function peco-git-revert-recently-merges() {
-  local commit_hash=$(git log --first-parent --merges \
+function peco-git-revert-recently-commits() {
+  local commit_hash=$(git log --first-parent \
     --pretty=format:'%h %s - %an, %ar' \
     | peco | awk '{ print $1 }')
   if [ -n "$commit_hash" ]; then
-    git revert -m 1 ${commit_hash}
+    local parents=$(git rev-list --parents -n 1 ${commit_hash} | wc -w)
+    echo Reverting ${commit_hash}
+    if [ "$parents" -eq 2 ]; then
+      git revert ${commit_hash}
+    else
+      git revert -m 1 ${commit_hash}
+    fi
   fi
 }
 
