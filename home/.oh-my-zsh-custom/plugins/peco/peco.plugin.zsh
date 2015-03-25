@@ -49,7 +49,7 @@ function peco-pkill() {
 alias pk="peco-pkill"
 
 # select branch
-function peco-select-branch() {
+function peco-git-select-branch() {
   git branch | peco | sed -e "s/^\*[ ]*//g"
 }
 alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
@@ -91,6 +91,11 @@ function peco-git-recent-all-branches() {
 }
 zle -N peco-git-recent-all-branches
 bindkey '^xb' peco-git-recent-all-branches
+
+function peco-git-select-commit() {
+  git log --pretty=format:"%h %s - %an, %ar" | peco | cut -d" " -f1
+}
+alias -g C='`git log --pretty=format:"%h %s - %an, %ar" | peco | cut -d" " -f1`'
 
 function peco-git-revert-recent-commits() {
   local commit_hash=$(git log --first-parent \
