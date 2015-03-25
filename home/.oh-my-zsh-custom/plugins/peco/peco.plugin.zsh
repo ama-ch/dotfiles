@@ -6,12 +6,13 @@ function peco-select-history() {
   else
     tac='tail -r'
   fi
-  BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+  BUFFER=$(fc -l -n 1 | eval $tac | \
+           peco --layout=bottom-up --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle -R -c
 }
 zle -N peco-select-history
-bindkey '^x^r' peco-select-history
+bindkey '^r' peco-select-history
 
 # integrate all source code with ghq
 function peco-src() {
