@@ -10,6 +10,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 
 ```sh
 $ brew install caskroom/cask/brew-cask
+$ brew tap caskroom/versions
 ```
 
 ### Install [rbenv](https://github.com/sstephenson/rbenv/)
