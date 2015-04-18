@@ -13,6 +13,12 @@ $ brew install caskroom/cask/brew-cask
 $ brew tap caskroom/versions
 ```
 
+### Install go
+
+```sh
+$ brew install go
+```
+
 ### Install [rbenv](https://github.com/sstephenson/rbenv/)
 
 ```sh
