@@ -9,7 +9,7 @@ brew cask install google-chrome
 brew cask install dropbox
 brew cask install google-japanese-ime
 brew cask install cmd-eikana
-Brew cask install atom
+brew cask install atom
 brew cask install the-unarchiver
 brew cask install skitch
 brew cask install flux
