@@ -32,7 +32,6 @@ ZSH_THEME="ama-ch"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
 common
-brew
 extract
 gem
 git
@@ -59,3 +58,4 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 PATH=/usr/local/sbin:$PATH
+eval "$(rbenv init -)"
