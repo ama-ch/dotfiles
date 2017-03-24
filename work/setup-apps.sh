@@ -1,9 +1,5 @@
 #!/bin/bash -x
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/cask
-brew install mas
-
 # Casks
 brew cask install google-chrome
 brew cask install dropbox
