@@ -10,6 +10,7 @@ brew cask install the-unarchiver
 brew cask install skitch
 brew cask install flux
 brew cask install cisco-proximity
+brew cask install kindle
 
 # Mac App Store
 mas install 443987910 # 1Password
