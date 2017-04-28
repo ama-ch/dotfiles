@@ -18,3 +18,4 @@ brew cask install intellij-idea
 mas install 443987910 # 1Password
 mas install 937984704 # Amphetamine
 mas install 585829637 # Todoist
+mas install 715768417 # Microsoft Remote Desktop
