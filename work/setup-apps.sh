@@ -12,6 +12,7 @@ brew cask install flux
 brew cask install cisco-proximity
 brew cask install kindle
 brew cask install java
+brew cask install intellij-idea
 
 # Mac App Store
 mas install 443987910 # 1Password
