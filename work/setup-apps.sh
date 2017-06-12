@@ -13,7 +13,7 @@ brew cask install cisco-proximity
 brew cask install kindle
 brew cask install java
 brew cask install intellij-idea
-brew cask install vmware-fusion
+brew cask install virtualbox
 
 # Mac App Store
 mas install 443987910 # 1Password
