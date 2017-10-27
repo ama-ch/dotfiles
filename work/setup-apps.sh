@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+# 事前にiCloudにログインしておく
+
 # Casks
 brew cask install google-chrome
 brew cask install dropbox
