@@ -17,6 +17,7 @@ brew cask install intellij-idea
 brew cask install virtualbox
 
 # Mac App Store
+mas install 409183694 # Keynote
 mas install 443987910 # 1Password
 mas install 937984704 # Amphetamine
 mas install 585829637 # Todoist
